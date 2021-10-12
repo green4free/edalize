@@ -190,6 +190,7 @@ FILES = [
     {"name": "tcl_file_presynth.tcl", "file_type": "tclSourcePreSynth"},
     {"name": "tcl_file_prepnr.tcl", "file_type": "tclSourcePrePnR"},
     {"name": "tcl_file_prebitstream.tcl", "file_type": "tclSourcePreBitstream"},
+    {"name": "tcl_file_postbitstream.tcl", "file_type": "tclSourcePostBitstream"},
     {"name": "waiver_file.waiver", "file_type": "waiver"},
     {"name": "vlog_file.v", "file_type": "verilogSource"},
     {"name": "vlog05_file.v", "file_type": "verilogSource-2005"},

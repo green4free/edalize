@@ -164,6 +164,7 @@ class Libero(Edatool):
             'tclSourcePreSynth': 'source ',
             'tclSourcePrePnR': 'source ',
             'tclSourcePreBitstream': 'source ',
+            'tclSourcePostBitstream': 'source ',
         }
         _file_type = f.file_type.split('-')[0]
         if _file_type in file_types and _file_type == type:

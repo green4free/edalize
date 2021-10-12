@@ -25,6 +25,12 @@ puts "---------- Executing User pre-bitstream TCL script: {{src_file|tcl_file_fi
 {% endfor %}
 run_tool -name {GENERATEPROGRAMMINGDATA}
 
+{% for src_file in src_files if src_file|tcl_file_filter('tclSourcePostBitstream')%}
+# Source user defined TCL scripts
+puts "---------- Executing User post-bitstream TCL script: {{src_file|tcl_file_filter('tclSourcePostBitstream')|replace("source", "")|trim}} ----------"
+{{src_file|tcl_file_filter('tclSourcePostBitstream')}}
+{% endfor %}
+
 puts "To program the FPGA and SPI-Flash, run the 'Run PROGRAM Action' and 'Run PROGRAM_SPI_IMAGE Action' tools in the Design Flow menu."
 puts "If required, adjust the memory allocation and initialization before generating the bitstream and programming."
 puts "----------------- Finished building project -----------------------------"
